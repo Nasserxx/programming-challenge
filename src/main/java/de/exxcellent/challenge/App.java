@@ -82,7 +82,7 @@ public final class App {
             } else if (args[0] == "--weather") {
                 System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread(filePath));
             } else {
-                System.out.println(args[0] + " is not supported");
+                System.out.println(args[0] + " is not supported, please make sure to pass the correct ClI argument");
             }
 
 

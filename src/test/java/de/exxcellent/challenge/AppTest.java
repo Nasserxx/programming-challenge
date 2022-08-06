@@ -3,6 +3,7 @@ package de.exxcellent.challenge;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,15 +27,15 @@ class AppTest {
         assertEquals("successful", successLabel, "My expectations were not met");
     }
     @Test
-    void dayOfSmallestTemperature(){
-     int exepted = 14;
-     int result = 14;
+    void dayOfSmallestTemperature() throws IOException {
+     double exepted = 14.0;
+     double result = App.dayWithSmallestTempSpread("src/main/resources/de/exxcellent/challenge/weather.csv");
         assertEquals(exepted, result, "My expectations were not met");
     }
     @Test
-    void teamOfSmallestDifferrence(){
+    void teamOfSmallestDifferrence() throws IOException {
         String exepted = "Aston_Villa";
-        String result = "Aston_Villa";
+        String result = App.teamWithSmallestGoalSpread("src/main/resources/de/exxcellent/challenge/football.csv");
         assertEquals(exepted, result, "My expectations were not met");
     }
 
