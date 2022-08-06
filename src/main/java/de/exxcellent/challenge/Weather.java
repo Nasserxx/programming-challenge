@@ -1,24 +1,26 @@
 package de.exxcellent.challenge;
 
-public class Weather {
+import java.util.Arrays;
 
-    public float day;
-    public float mxT;
-    public float mnT;
-    public float avT;
-    public float avDP;
-    public float lHrP;
-    public float tPcpn;
-    public float pDir;
-    public float avSp;
-    public float dir;
-    public float mxS;
-    public float skyC;
-    public float mxR;
-    public float mn;
-    public float r_avSLP;
+public class Weather  implements  CsvDescerlizer {
+
+    public double day;
+    public double mxT;
+    public double mnT;
+    public double avT;
+    public double avDP;
+    public double lHrP;
+    public double tPcpn;
+    public double pDir;
+    public double avSp;
+    public double dir;
+    public double mxS;
+    public double skyC;
+    public double mxR;
+    public double mn;
+    public double r_avSLP;
     public Weather() {}
-    public Weather(float... values) {
+    public Weather(double... values) {
         this.day = values[0];
         this.mxT = values[1];
         this.mnT = values[2];
@@ -36,5 +38,11 @@ public class Weather {
         this.r_avSLP = values[14];
     }
 
+    @Override
+    public Weather descrelizer(String line, String sperator) {
+        String [] dataArray= line.split(sperator);
+        double[] values= Arrays.stream(dataArray).mapToDouble(Double::parseDouble).toArray();
 
+        return new Weather(values);
+    }
 }
