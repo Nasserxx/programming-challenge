@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac528aee-34fd-4984-847f-f3a9fe23e47d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/CsvDescerlizer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/Football.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/Weather.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/de/exxcellent/challenge/CsvDescerlizer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/de/exxcellent/challenge/Football.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/de/exxcellent/challenge/Weather.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/de/exxcellent/challenge/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/exxcellent/challenge/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/exxcellent/challenge/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/exxcellent/challenge/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/de/exxcellent/challenge/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/de/exxcellent/challenge/App.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +57,7 @@
     "last_opened_file_path": "C:/Workspace/gg/programming-challenge"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager" selected="JUnit.AppTest.runWeather">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.exxcellent.challenge.App" />
       <module name="challenge" />
@@ -131,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="JUnit.AppTest.dayOfSmallestTemperature" />
-        <item itemvalue="JUnit.AppTest.teamOfSmallestDifferrence" />
         <item itemvalue="JUnit.AppTest.runWeather" />
         <item itemvalue="JUnit.AppTest.runFootball" />
+        <item itemvalue="JUnit.AppTest.dayOfSmallestTemperature" />
+        <item itemvalue="Application.App" />
+        <item itemvalue="JUnit.AppTest.teamOfSmallestDifferrence" />
       </list>
     </recent_temporary>
   </component>
