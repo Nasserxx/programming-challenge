@@ -2,7 +2,7 @@ package de.exxcellent.challenge;
 
 import java.util.Arrays;
 
-public class Football {
+public class Football implements  CsvDescerlizer {
     public String team;
     public int games;
     public int wins;
@@ -24,5 +24,16 @@ public class Football {
         this.goals =  values[4];
         this.goalsAllowed =  values[5];
         this.points =  values[6];
+    }
+
+    @Override
+    public Football descrelizer(String line, String sperator) {
+        String [] dataArray= line.split(sperator);
+        String [] strValues =Arrays.copyOfRange(dataArray,1,dataArray.length);
+
+        String team = dataArray[0];
+        int[] intValues= Arrays.stream(strValues).mapToInt(Integer::parseInt).toArray();
+
+        return new Football(team,intValues);
     }
 }
