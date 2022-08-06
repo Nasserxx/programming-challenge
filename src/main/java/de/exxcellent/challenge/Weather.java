@@ -9,8 +9,7 @@ public class Weather  implements  CsvDescerlizer {
     public double mnT;
     public double avT;
     public double avDP;
-    public double lHrP;
-    public double tPcpn;
+    public double lHrP_tPcpn;
     public double pDir;
     public double avSp;
     public double dir;
@@ -26,16 +25,15 @@ public class Weather  implements  CsvDescerlizer {
         this.mnT = values[2];
         this.avT = values[3];
         this.avDP = values[4];
-        this.lHrP = values[5];
-        this.tPcpn = values[6];
-        this.pDir = values[7];
-        this.avSp = values[8];
-        this.dir = values[9];
-        this.mxS = values[10];
-        this.skyC = values[11];
-        this.mxR = values[12];
-        this.mn = values[13];
-        this.r_avSLP = values[14];
+        this.lHrP_tPcpn = values[5];
+        this.pDir = values[6];
+        this.avSp = values[7];
+        this.dir = values[8];
+        this.mxS = values[9];
+        this.skyC = values[10];
+        this.mxR = values[11];
+        this.mn = values[12];
+        this.r_avSLP = values[13];
     }
 
     @Override

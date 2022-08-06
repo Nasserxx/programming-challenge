@@ -51,7 +51,18 @@ public final class App {
         return bestTeam.team;
     }
 
+    public static double dayWithSmallestTempSpread(String filePath) throws IOException {
+        List<CsvDescerlizer<Weather>> data = csvReader(filePath, ",", new Weather());
 
+        Weather bestWeather = (Weather) data.stream().reduce(new Weather(30,90,45,68,63.6,0,240,6,220,17,4.8,200,41,1022.7), (accumulator, weather) -> {
+
+            if (abs(((Weather) weather).mxT - ((Weather) weather).mnT) > abs(((Weather) accumulator).mxT - ((Weather) accumulator).mnT)) {
+                return accumulator;
+            }
+            return weather;
+        });
+        return bestWeather.day;
+    }
     /**
      * This is the main entry method of your program.
      *
@@ -69,8 +80,7 @@ public final class App {
             if (args[0] == "--football") {
                 System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread(filePath));
             } else if (args[0] == "--weather") {
-                String dayWithSmallestTempSpread = "Someday";     // Your day analysis function call …
-                System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread);
+                System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread(filePath));
             } else {
                 System.out.println(args[0] + " is not supported");
             }
@@ -81,7 +91,7 @@ public final class App {
             System.out.println("please make sure to enter the correct file name");
 
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("please make sure to enter the correct file name");
+            System.out.println("ArrayIndexOutOfBoundsException....");
         }
     }
 }
