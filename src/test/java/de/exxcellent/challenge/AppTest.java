@@ -40,11 +40,11 @@ class AppTest {
     }
 
     @Test
-    void runFootball() {
+    void runFootball() throws IOException {
         App.main("--football", "football.csv");
     }
     @Test
-    void runWeather() {
+    void runWeather() throws IOException {
         App.main("--weather", "weather.csv");
     }
 

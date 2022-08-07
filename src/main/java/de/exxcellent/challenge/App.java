@@ -54,7 +54,7 @@ public final class App {
     public static double dayWithSmallestTempSpread(String filePath) throws IOException {
         List<CsvDescerlizer<Weather>> data = csvReader(filePath, ",", new Weather());
 
-        Weather bestWeather = (Weather) data.stream().reduce(new Weather(30,90,45,68,63.6,0,240,6,220,17,4.8,200,41,1022.7), (accumulator, weather) -> {
+        Weather bestWeather = (Weather) data.stream().reduce(new Weather(30, 90, 45, 68, 63.6, 0, 240, 6, 220, 17, 4.8, 200, 41, 1022.7), (accumulator, weather) -> {
 
             if (abs(((Weather) weather).mxT - ((Weather) weather).mnT) > abs(((Weather) accumulator).mxT - ((Weather) accumulator).mnT)) {
                 return accumulator;
@@ -63,12 +63,13 @@ public final class App {
         });
         return bestWeather.day;
     }
+
     /**
      * This is the main entry method of your program.
      *
      * @param args The CLI arguments passed
      */
-    public static void main(String... args) {
+    public static void main(String... args) throws IOException {
 
         // Your preparation code …
 
@@ -91,7 +92,10 @@ public final class App {
             System.out.println("please make sure to enter the correct file name");
 
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("ArrayIndexOutOfBoundsException....");
+            System.out.println("Please make sure to passe the CLI arguments, which are either --football (filename.csv)" +
+                    " or --weather (filename.csv) otherwise the following are the results:");
+            System.out.printf("Team with smallest goal spread       : %s%n", teamWithSmallestGoalSpread( "src/main/resources/de/exxcellent/challenge/football.csv"));
+            System.out.printf("Day with smallest temperature spread : %s%n", dayWithSmallestTempSpread( "src/main/resources/de/exxcellent/challenge/weather.csv"));
         }
     }
 }
